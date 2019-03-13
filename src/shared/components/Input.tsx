@@ -61,8 +61,8 @@ const LabelledInput: SFC<InputProps> = (props) => {
         <Label display="inline">
           <LabelContent>
             { label }
-            { error && ' ' }
-            { error && <ErrorText>{error}</ErrorText> }
+            { error ? ' ' : null }
+            { error ? <ErrorText>{error}</ErrorText> : null }
           </LabelContent>
           <Input {...rest} />
         </Label>
