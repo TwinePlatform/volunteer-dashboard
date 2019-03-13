@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Route, RouteProps, Redirect } from 'react-router-dom';
-import { FullScreenBeatLoader } from '../../shared/components/Loaders';
+import { FullScreenBeatLoader } from '../../components/Loaders';
 import { colors } from '../../styles/style_guide';
 import { Roles } from '../../api';
 

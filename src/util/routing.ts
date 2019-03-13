@@ -1,5 +1,5 @@
 import { AxiosError } from 'axios';
-import { Response } from '../../api';
+import { Response } from '../api';
 import { Dictionary } from 'ramda';
 
 /**

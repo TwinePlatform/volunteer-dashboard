@@ -4,10 +4,10 @@ import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Formik, Form as _Form, Field } from 'formik';
 import { CbAdmins } from '../api';
-import Input from '../shared/components/Input';
-import { SubmitButton } from '../shared/components/Buttons';
-import NavHeader from '../shared/components/NavHeader/NavHeader';
-import { redirectOnError } from '../shared/util/routing';
+import Input from '../components/Input';
+import { SubmitButton } from '../components/Buttons';
+import NavHeader from '../components/NavHeader/NavHeader';
+import { redirectOnError } from '../util/routing';
 
 
 /**

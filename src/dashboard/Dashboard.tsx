@@ -2,8 +2,8 @@ import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { CbAdmins, Response, CommunityBusinesses } from '../api';
-import { redirectOnError } from '../shared/util/routing';
-import NavHeader from '../shared/components/NavHeader/NavHeader';
+import { redirectOnError } from '../util/routing';
+import NavHeader from '../components/NavHeader/NavHeader';
 
 
 interface DashboardProps extends RouteComponentProps {}

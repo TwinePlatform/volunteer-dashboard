@@ -5,7 +5,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import { Form as _Form, FormikActions } from 'formik';
 import { CbAdmins, Response } from '../../../api';
 import LoginForm, { FormValues } from './LoginForm';
-import { H1, H4 } from '../../../shared/components/Headings';
+import { H1, H4 } from '../../../components/Headings';
 
 
 /**

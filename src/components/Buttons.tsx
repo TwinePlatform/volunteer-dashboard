@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { rgba } from 'polished';
-import { colors, fonts } from '../../styles/style_guide';
+import { colors, fonts } from '../styles/style_guide';
 
 
 export const Button = styled.button`

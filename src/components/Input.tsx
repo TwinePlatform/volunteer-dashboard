@@ -2,7 +2,7 @@ import React, { SFC } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { rgba } from 'polished';
-import { colors, fonts } from '../../styles/style_guide';
+import { colors, fonts } from '../styles/style_guide';
 
 
 interface InputProps extends React.InputHTMLAttributes<{}> {

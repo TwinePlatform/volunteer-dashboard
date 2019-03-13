@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fonts, colors } from '../../styles/style_guide';
+import { fonts, colors } from '../styles/style_guide';
 
 export const H1 = styled.h1`
   font-size: ${fonts.size.heading};

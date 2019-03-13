@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
-import Dots from './shared/components/Dots';
+import Dots from './components/Dots';
 import PrivateRoute from './auth/components/PrivateRoute';
 import Dashboard from './dashboard/Dashboard';
 import Login from './auth/pages/Login/Login';
 import ResetPassword from './auth/ResetPassword';
 import ForgotPassword from './auth/ForgotPassword';
-import ErrorPage from './shared/pages/Error';
+import ErrorPage from './Error';
 import { fonts } from './styles/style_guide';
 
 

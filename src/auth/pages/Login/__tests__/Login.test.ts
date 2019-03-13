@@ -5,7 +5,7 @@ import {
   waitForElement,
   wait,
 } from 'react-testing-library';
-import { renderWithHistory } from '../../../../shared/util/tests';
+import { renderWithHistory } from '../../../../util/tests';
 import { axios } from '../../../../api';
 import Login from '../Login';
 import 'jest-dom/extend-expect';

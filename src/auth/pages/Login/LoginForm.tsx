@@ -2,9 +2,9 @@ import * as Joi from 'joi';
 import React from 'react';
 import styled from 'styled-components';
 import { Formik, Form as _Form, Field, FormikActions } from 'formik';
-import Input from '../../../shared/components/Input';
-import { SubmitButton } from '../../../shared/components/Buttons';
-import { validateForm } from '../../../shared/util/forms';
+import Input from '../../../components/Input';
+import { SubmitButton } from '../../../components/Buttons';
+import { validateForm } from '../../../util/forms';
 
 
 /**
