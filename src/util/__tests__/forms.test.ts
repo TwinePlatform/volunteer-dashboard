@@ -22,7 +22,7 @@ describe('Utils :: forms', () => {
       expect(errors.a).toBe('"a" length must be at least 3 characters long');
     });
 
-    test.only('Multiple invalid values', () => {
+    test('Multiple invalid values', () => {
       const schema = Joi.object({
         a: Joi.string().min(3).max(5),
         b: Joi.number().integer().positive(),
