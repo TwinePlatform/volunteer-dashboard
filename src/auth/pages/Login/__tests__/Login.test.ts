@@ -171,7 +171,7 @@ describe('Login Page', () => {
     expect(passwordLabel).toHaveTextContent('"password" length must be at least 8 characters long');
   });
 
-  test.only('Click on "Forgot Password" link', async () => {
+  test('Click on "Forgot Password" link', async () => {
     expect.assertions(1);
 
     const tools = renderWithHistory()(Login);

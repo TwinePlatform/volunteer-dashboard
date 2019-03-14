@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { CbAdmins, Response, CommunityBusinesses } from '../api';
 import { redirectOnError } from '../util/routing';
@@ -11,7 +11,7 @@ interface DashboardState {
   organisationName: string;
 }
 
-export default class Dashboard extends React.Component<DashboardProps, DashboardState> {
+class Dashboard extends React.Component<DashboardProps, DashboardState> {
   constructor (props: Readonly<DashboardProps>) {
     super(props);
 
@@ -50,3 +50,4 @@ export default class Dashboard extends React.Component<DashboardProps, Dashboard
   }
 }
 
+export default withRouter(Dashboard);
