@@ -19,7 +19,10 @@ export const Roles = {
 
 export const CbAdmins = {
   login: ({ email, password }: { email: string, password: string }) =>
-    axios.post('/users/login', { email, password, type: 'cookie', restrict: 'CB_ADMIN' }),
+    axios.post(
+      '/users/login',
+      { email, password, type: 'cookie', restrict: ['CB_ADMIN', 'VOLUNTEER_ADMIN'] }
+    ),
 
   logout: () => axios.get('/users/logout'),
 
