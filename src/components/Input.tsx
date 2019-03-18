@@ -5,7 +5,7 @@ import { rgba } from 'polished';
 import { colors, fonts } from '../styles/style_guide';
 
 
-interface InputProps extends React.InputHTMLAttributes<{}> {
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
 }
