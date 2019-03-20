@@ -27,7 +27,7 @@ export const CbAdmins = {
   logout: () => axios.get('/users/logout'),
 
   forgotPassword: ({ email }: { email: string }) =>
-    axios.post('/users/password/forgot', { email, redirect: 'VISITOR_APP' }),
+    axios.post('/users/password/forgot', { email, redirect: 'DASHBOARD_APP' }),
 
   // tslint:disable-next-line:max-line-length
   resetPassword: (payload: { email: string, password: string, passwordConfirm: string, token: string }) =>
