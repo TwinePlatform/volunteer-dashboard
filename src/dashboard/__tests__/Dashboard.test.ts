@@ -28,7 +28,7 @@ describe('Dashboard Page', () => {
       .onGet('/v1/community-businesses/me').reply(200, { result: { name: 'Foo' } })
       .onGet('/v1/users/logout').reply(200, {});
 
-    const tools = renderWithHistory()(Dashboard);
+    const tools = renderWithHistory(Dashboard);
 
     const [logoutBtn] = await waitForElement(async () => [
       tools.getByText('Logout'),
@@ -44,7 +44,7 @@ describe('Dashboard Page', () => {
 
     mock.onGet('/v1/community-businesses/me').reply(401, { error: { } });
 
-    const tools = renderWithHistory()(Dashboard);
+    const tools = renderWithHistory(Dashboard);
 
     await wait(() => expect(tools.history.location.pathname).toEqual('/login'));
   });
@@ -54,7 +54,7 @@ describe('Dashboard Page', () => {
 
     mock.onGet('/v1/community-businesses/me').reply(403, { error: { } });
 
-    const tools = renderWithHistory()(Dashboard);
+    const tools = renderWithHistory(Dashboard);
 
     await wait(() => expect(tools.history.location.pathname).toEqual('/login'));
   });
@@ -64,7 +64,7 @@ describe('Dashboard Page', () => {
 
     mock.onGet('/v1/community-businesses/me').reply(500, { error: { } });
 
-    const tools = renderWithHistory()(Dashboard);
+    const tools = renderWithHistory(Dashboard);
 
     await wait(() => expect(tools.history.location.pathname).toEqual('/error/500'));
   });
