@@ -5,8 +5,8 @@ import Dots from './components/Dots';
 import PrivateRoute from './auth/components/PrivateRoute';
 import Dashboard from './dashboard/Dashboard';
 import Login from './auth/pages/Login/Login';
-import ResetPassword from './auth/ResetPassword';
-import ForgotPassword from './auth/ForgotPassword';
+import ResetPassword from './auth/pages/ResetPassword';
+import ForgotPassword from './auth/pages/ForgotPassword';
 import ErrorPage from './Error';
 import { fonts } from './styles/style_guide';
 
