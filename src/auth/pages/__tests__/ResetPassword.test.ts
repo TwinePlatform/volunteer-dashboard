@@ -11,7 +11,7 @@ import ResetPassword from '../ResetPassword';
 import 'jest-dom/extend-expect';
 
 
-describe('ResetPassword Page', () => {
+describe.skip('ResetPassword Page', () => {
   let mock: MockAdapter;
 
   beforeAll(() => {
