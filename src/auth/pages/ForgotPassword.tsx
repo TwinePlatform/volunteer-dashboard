@@ -54,6 +54,9 @@ const createSubmitHandler = (props: ForgotPasswordProps) => {
 const schema = Joi.object({ email: Joi.string().email().required() });
 
 
+/**
+ * Component
+ */
 const ForgotPassword: React.SFC<ForgotPasswordProps> = (props) => (
   <Grid>
     <NavHeader

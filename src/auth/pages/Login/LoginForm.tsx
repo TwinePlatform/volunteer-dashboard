@@ -29,7 +29,9 @@ type LoginFormProps = {
   onSubmit: (v: FormValues, a: FormikActions<FormValues>) => void
 };
 
-
+/**
+ * Component
+ */
 const LoginForm: React.SFC<LoginFormProps> = (props) => (
   <Formik
     initialValues={{ email: '', password: '' }}

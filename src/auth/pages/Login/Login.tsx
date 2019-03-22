@@ -6,6 +6,7 @@ import { Form as _Form, FormikActions } from 'formik';
 import { CbAdmins, Response } from '../../../api';
 import LoginForm, { FormValues } from './LoginForm';
 import { H1, H4 } from '../../../components/Headings';
+import { redirectOnError } from '../../../util/routing';
 
 
 /**
@@ -41,7 +42,7 @@ const createSubmitHandler = (props: LoginProps) =>
         } else if (Response.statusEquals(res, 403)) {
           actions.setErrors({ password: Response.errorMessage(res) });
         } else {
-          props.history.push(`/error/${Response.status(res)}?referrer=login`);
+          redirectOnError(props.history.push, error);
         }
       });
 

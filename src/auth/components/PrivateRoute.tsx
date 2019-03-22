@@ -9,7 +9,7 @@ import { Roles } from '../../api';
 /**
  * Types
  */
-enum AuthStatus {
+enum AuthStatusEnum {
   PENDING = 'PENDING',
   SUCCESS = 'SUCCESS',
   FAILURE = 'FAILURE',
@@ -18,7 +18,7 @@ enum AuthStatus {
 interface PrivateRouteProps extends RouteProps {}
 
 interface PrivateRouteState {
-  authStatus: AuthStatus;
+  authStatus: AuthStatusEnum;
 }
 
 
@@ -29,30 +29,30 @@ export default class PrivateRoute extends Component<PrivateRouteProps, PrivateRo
   };
 
   state = {
-    authStatus: AuthStatus.PENDING,
+    authStatus: AuthStatusEnum.PENDING,
   };
 
   componentDidMount () {
     Roles.get()
-      .then(() => this.setState({ authStatus: AuthStatus.SUCCESS }))
-      .catch(() => this.setState({ authStatus: AuthStatus.FAILURE }));
+      .then(() => this.setState({ authStatus: AuthStatusEnum.SUCCESS }))
+      .catch(() => this.setState({ authStatus: AuthStatusEnum.FAILURE }));
   }
 
   render () {
     const { component: Comp, ...rest } = this.props;
 
     switch (this.state.authStatus) {
-      case AuthStatus.PENDING:
+      case AuthStatusEnum.PENDING:
         return (
           <FullScreenBeatLoader color={colors.highlight_primary} />
         );
 
-      case AuthStatus.SUCCESS:
+      case AuthStatusEnum.SUCCESS:
         return (
           <Route {...rest} component={Comp} />
         );
 
-      case AuthStatus.FAILURE:
+      case AuthStatusEnum.FAILURE:
       default:
         return (
           <Redirect to={{ pathname: '/login' }} />

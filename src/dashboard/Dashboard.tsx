@@ -11,6 +11,9 @@ interface DashboardState {
   organisationName: string;
 }
 
+/**
+ * Component
+ */
 class Dashboard extends React.Component<DashboardProps, DashboardState> {
   constructor (props: Readonly<DashboardProps>) {
     super(props);

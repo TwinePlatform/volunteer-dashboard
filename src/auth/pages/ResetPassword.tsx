@@ -39,6 +39,9 @@ const schema = Joi.object({
     } } }),
 });
 
+/**
+ * Component
+ */
 const ResetPassword: React.SFC<ResetPasswordProps> = (props) => (
   <Grid>
     <NavHeader
