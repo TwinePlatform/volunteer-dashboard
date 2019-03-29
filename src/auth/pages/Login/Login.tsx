@@ -7,7 +7,7 @@ import { Notification } from 'react-notification';
 import { CbAdmins, Response } from '../../../api';
 import LoginForm, { FormValues } from './LoginForm';
 import { H1, H4 } from '../../../components/Headings';
-import { redirectOnError, getQueryObject } from '../../../util/routing';
+import { redirectOnError, getQueryObjectFromProps } from '../../../util/routing';
 import { colors } from '../../../styles/style_guide';
 
 
@@ -50,7 +50,7 @@ const createSubmitHandler = (props: LoginProps) =>
 
 // Derive notification message from "referrer" query param
 const getMessage = (props: LoginProps) => {
-  switch (getQueryObject(props).referrer) {
+  switch (getQueryObjectFromProps(props).referrer) {
     case 'forgot_password':
       return 'Password reset e-mail has been sent';
 

@@ -8,7 +8,7 @@ import { CbAdmins, Response } from '../../api';
 import Input from '../../components/Input';
 import { SubmitButton } from '../../components/Buttons';
 import NavHeader from '../../components/NavHeader/NavHeader';
-import { redirectOnError, withParams, getQueryObject } from '../../util/routing';
+import { redirectOnError, withParams, getQueryObjectFromProps } from '../../util/routing';
 import { validateForm } from '../../util/forms';
 import { AxiosError } from 'axios';
 
@@ -54,7 +54,7 @@ const ResetPassword: React.SFC<ResetPasswordProps> = (props) => (
           <Formik
             initialValues={{ password: '', passwordConfirm: '' }}
             onSubmit={(values, actions) => {
-              const query = getQueryObject(props);
+              const query = getQueryObjectFromProps(props);
               const email = typeof query.email === 'string' ? query.email : query.email[0];
 
               CbAdmins.resetPassword({
